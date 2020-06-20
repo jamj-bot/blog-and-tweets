@@ -3,10 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Tweets
+                </div>
+                 <div class="card-body">
+                    Aquí nos conectaremos a la API de Twiiter
+                 </div>
+            </div>
+        </div>
+
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
-
+                <div class="card-header">{{ $user->name }}</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
