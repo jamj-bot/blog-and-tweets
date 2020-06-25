@@ -16,12 +16,12 @@
 
                     {{ $entry->content }}
 
-                    @if($entry->user_id === auth()->id())
+                    @can('update', $entry)
                         <hr>
                         <a class="btn btn-primary" href="{{ url('/entries/'.$entry->id.'/edit') }}">
                             Edit entry
                         </a>
-                    @endif
+                    @endcan
                 </div>
             </div>
         </div>
