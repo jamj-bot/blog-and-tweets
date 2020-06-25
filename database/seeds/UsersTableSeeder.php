@@ -12,12 +12,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        //Creando un usuario con datos reales
         User::create([
         	'name' => 'jorgearturomolina',
         	'email' => 'jorgearturomolina@example.com',
         	'password' => bcrypt('jorgearturomolina')
         ]);
 
+        //Creando 10 usuarios ficticios con la UserFactory
         factory(User::class, 10)->create();
     }
 }
